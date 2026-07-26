@@ -1022,3 +1022,46 @@ footer {
     height: 230px;
   }
 }
+
+/* Portfolio image cards */
+.project-image {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  background: #08111f;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  display: block;
+  object-fit: cover;
+  transition: transform .55s ease, filter .55s ease;
+}
+
+.project-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    to top,
+    rgba(5, 12, 22, .76) 0%,
+    rgba(5, 12, 22, .16) 48%,
+    transparent 72%
+  );
+  pointer-events: none;
+}
+
+.project-image span {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  z-index: 2;
+}
+
+.project:hover .project-image img {
+  transform: scale(1.06);
+  filter: brightness(1.05);
+}
