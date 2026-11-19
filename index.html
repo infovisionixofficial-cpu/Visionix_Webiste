@@ -6,6 +6,7 @@
   <meta name="description" content="Visionix Creative is a Bengaluru-based creative agency specialising in branding, video production, motion graphics, social media marketing, websites and professional shoots.">
   <meta name="theme-color" content="#08111f">
   <title>Visionix Creative | Creative Media & Marketing Solutions</title>
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
@@ -28,13 +29,12 @@
 
   <main>
     <section class="hero" id="home">
-      <div class="hero-orb orb-one"></div>
-      <div class="hero-orb orb-two"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Creative Media & Marketing Solutions</p>
-          <h1>Creative work that makes your business <span>impossible to ignore.</span></h1>
-          <p class="hero-lead">Visionix Creative helps brands grow through strategic design, cinematic video, social content and digital experiences.</p>
+      <video class="hero-video" data-src="intro.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">AI-powered Creative & Marketing Partner</p>
+          <h1>Your Ambition Deserves a Partner  <span>You Can Trust.</span></h1>
+          <p class="hero-lead">Visionix Creative helps brands grow through AI-powered strategies, strategic design, cinematic video production, engaging social content, and innovative digital experiences.</p>
           <div class="hero-actions">
             <a class="button primary" href="#contact">Start Your Project</a>
             <a class="button ghost" href="#work">Explore Our Work</a>
@@ -46,14 +46,7 @@
           </div>
         </div>
 
-        <div class="hero-visual reveal delay-1">
-          <div class="hero-frame">
-            <img src="branding.jpg" alt="Visionix Creative brand identity presentation">
-            <div class="hero-overlay"></div>
-          </div>
-          <div class="float-card float-top"><small>Brand Strategy</small><strong>Built to be remembered.</strong></div>
-          <div class="float-card float-bottom"><small>Visual Content</small><strong>Made to stop the scroll.</strong></div>
-        </div>
+        <button class="hero-playback" type="button" hidden>Play background video</button>
       </div>
     </section>
 
@@ -181,23 +174,58 @@
           <p class="eyebrow">Start a Project</p>
           <h2>Let’s build something powerful together.</h2>
           <p>Tell us what you are planning. We’ll help you choose the right creative solution for your brand, campaign or business.</p>
-          <div class="contact-links">
-    <a href="mailto:harshavardhana704@gmail.com">
-        📧 harshavardhana704@gmail.com
-    </a>
-
-    <a href="tel:+919902030963">
-        📞 +91 99020 30963
-    </a>
-
-    <a href="tel:+917411336859">
-        📞 +91 74113 36859
-    </a>
-
-    <a href="https://www.instagram.com/visionix.official/" target="_blank">
-        📷 @visionix.official
-    </a>
-</div>
+          <dl class="contact-links">
+            <div>
+              <dt>
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                    <rect x="3" y="5" width="18" height="14" rx="2"/>
+                    <path d="m4 7 8 6 8-6"/>
+                  </svg>
+                </span>
+                Email
+              </dt>
+              <dd><a href="mailto:harshavardhana704@gmail.com">harshavardhana704@gmail.com</a></dd>
+            </div>
+            <div>
+              <dt>
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                    <rect x="7" y="3" width="10" height="18" rx="2"/>
+                    <path d="M11 17h2"/>
+                  </svg>
+                </span>
+                Mobile
+              </dt>
+              <dd>
+                <a href="tel:+919902030963">+91 99020 30963</a>
+                <a href="tel:+917411336859">+91 74113 36859</a>
+              </dd>
+            </div>
+          </dl>
+          <ul class="contact-socials" aria-label="Social media">
+            <li>
+              <a href="https://www.instagram.com/visionix.official/?hl=en" target="_blank" rel="noopener">
+                <img src="ig-instagram-icon.svg" alt="" width="18" height="18"> Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=61573076743905" target="_blank" rel="noopener">
+                <img src="facebook-round-color-icon.svg" alt="" width="18" height="18"> Facebook
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+                <img src="linkedin-app-icon.svg" alt="" width="18" height="18"> LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://youtube.com/@visionixofficial1?si=IJL36buHTKe46hBW" target="_blank" rel="noopener">
+                <img src="youtube-color-icon.svg" alt="" width="18" height="18"> YouTube
+              </a>
+            </li>
+          </ul>
+        </div>
 
         <form class="contact-form reveal delay-1" action="https://formsubmit.co/harshavardhana704@gmail.com" method="POST">
           <input type="hidden" name="_subject" value="New Visionix Creative website enquiry">
@@ -221,7 +249,12 @@
     </section>
   </main>
 
-  <a class="whatsapp" href="https://wa.me/919902030963?text=Hi%20Visionix%20Creative%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Contact Visionix Creative on WhatsApp">WA</a>
+  <a class="whatsapp" href="https://wa.me/919902030963?text=Hi%20Visionix%20Creative%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Contact Visionix Creative on WhatsApp">
+    <img src="/whatsapp-color-icon.svg">
+  
+  
+  </img>
+  </a>
 
   <footer>
     <div class="container footer-grid">
